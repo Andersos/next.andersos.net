@@ -1,0 +1,20 @@
+{
+  "name": "andersos.net",
+  "version": "0.0.1",
+  "description": "Anders sitt hjem på nettet",
+  "scripts": {
+    "build": "eleventy",
+    "watch": "eleventy --watch",
+    "serve": "eleventy --serve",
+    "start": "eleventy --serve",
+    "debug": "DEBUG=* eleventy",
+    "lint:css": "stylelint '**/*.css'",
+    "lint": "yarn lint:css"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "node-fetch": "^2.6.1",
+    "stylelint": "^13.10.0",
+    "stylelint-config-standard": "^20.0.0"
+  }
+}
