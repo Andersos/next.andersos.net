@@ -1,16 +1,51 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
-    <style>
-    {% include 'normalize.css' %}
-    {% include 'base.css' %}
-    </style>
-  </head>
-  <body>
-  <header><a href="/">Home</a><a href="/photos">Photos</a></header>
+  <!doctype html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>{{ title }}</title>
+      <style>
+      {% include 'normalize.css' %}
+      {% include 'base.css' %}
+      </style>
+    </head>
+    <body>
+    <header>
+      <nav id="nav" role="navigation">
+        <a class="logo" href="/">
+          <svg viewBox="0 0 526 477">
+            <title>andersos.net</title>
+            <g>
+              <path
+              class="right"
+              d="M 220.90019,0.70642993 406.45378,330.96518 l -206.2649,0.11485 -39.56378,70.71366 365.21799,0.057 L 303.04068,0.49999993 Z"
+              style="fill:#EE5D2D" />
+              <path
+              class="left"
+                d="M 220.89003,0.67930993 0.49999288,401.78563 40.906091,474.51662 223.7437,143.18658 325.76911,331.07495 h 80.8122 z"
+                style="fill:#D92B2E" />
+              <path
+              class="bottom"
+                d="m 223.7859,143.24908 40.29125,74.21925 -103.62832,184.37916 365.41516,0.18957 -38.47047,74.49986 -446.471009,-2.04687 z"
+                style="fill:#F38E2E"
+                  />
+            </g>
+          </svg>
+        </a>
+        <ul class="nav-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/photos/">Photos</a></li>
+          <li><a href="/about/">About</a></li>
+          <li>
+            <a href="/rss.xml" aria-label="RSS">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="16" width="16">
+                <path fill="currentColor" d="M 4 4.44 v 2.83 c 7.03 0 12.73 5.7 12.73 12.73 h 2.83 c 0 -8.59 -6.97 -15.56 -15.56 -15.56 Z m 0 5.66 v 2.83 c 3.9 0 7.07 3.17 7.07 7.07 h 2.83 c 0 -5.47 -4.43 -9.9 -9.9 -9.9 Z M 6.18 15.64 A 2.18 2.18 0 0 1 6.18 20 A 2.18 2.18 0 0 1 6.18 15.64"></path>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
     <main>{{ content | safe }}</main>
-  </body>
-</html>
+    </body>
+  </html>

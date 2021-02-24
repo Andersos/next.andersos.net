@@ -1,12 +1,12 @@
 {
   "name": "andersos.net",
   "version": "0.0.1",
-  "description": "Anders sitt hjem på nettet",
+  "description": "My home on the internet",
   "scripts": {
     "build": "eleventy",
     "watch": "eleventy --watch",
     "serve": "eleventy --serve",
-    "start": "eleventy --serve",
+    "start": "yarn serve",
     "debug": "DEBUG=* eleventy",
     "lint:css": "stylelint '**/*.css'",
     "lint": "yarn lint:css"

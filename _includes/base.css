@@ -1,39 +1,104 @@
-body {
-  background-color: snow;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol";
+@font-face {
+  font-family: "Rubik";
+  src: url("/fonts/rubik_wght.ttf");
+}
+
+:root {
+  --link: goldenrod;
+  --link-active: gold;
+  --border: #3f3f3f;
+}
+
+html {
+  background-color: #1f1f1f;
+  font-family: "Rubik", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 62.5%;
-  color: #252525;
-  margin: 0;
+  color: white;
 }
 
 header {
-  background-color: #2196f3;
-  height: 6.4rem;
   display: flex;
-  line-height: 3.2rem;
-  align-items: center;
+  flex-wrap: wrap;
+  padding: 1.6rem 1.2rem;
 }
 
 header a {
-  margin-left: 2rem;
-  font-size: 2.4rem;
-  color: inherit;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
   text-decoration: none;
 }
 
-header h1 {
-  margin-top: 0;
-  margin-bottom: 0;
-  display: inline;
-  font-size: 2.4rem;
-  font-weight: 400;
+header .icon {
+  height: 2rem;
+  width: 2rem;
+}
+
+header .nav-list a:hover,
+header .nav-list a:focus {
+  color: gold;
+  box-shadow: 0 2px 0 0 gold;
+  outline: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.nav-list {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-list li:not(:last-of-type) {
+  margin-right: calc(2vw + 1rem);
+}
+
+.logo {
+  height: 4rem;
+  width: 4rem;
+  flex-shrink: 1;
+  transition: all 0.4s ease-in-out;
+  background: transparent;
+  appearance: none;
+  border: none;
+  cursor: pointer;
+}
+
+.logo:focus {
+  outline: none;
+}
+
+.logo:hover,
+.logo.focus-visible {
+  filter: hue-rotate(180deg);
+}
+
+@media (max-width: 30em) {
+  .logo svg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.logo .left {
+  fill: var(--logo-left);
+}
+
+.logo .right {
+  fill: var(--logo-right);
+}
+
+.logo .bottom {
+  fill: var(--logo-bottom);
 }
 
 h2 {
   font-size: 2.4rem;
-  font-weight: 400;
 }
 
 .error {
@@ -51,8 +116,4 @@ main {
   text-align: center;
   margin-left: 2rem;
   margin-right: 2rem;
-}
-
-a:focus {
-  outline: solid red;
 }
