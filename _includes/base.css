@@ -19,7 +19,7 @@ html {
 header {
   display: flex;
   flex-wrap: wrap;
-  padding: 1.6rem 1.2rem;
+  padding: 1.6rem 2rem;
 }
 
 header a {
@@ -113,7 +113,6 @@ h2 {
 }
 
 main {
-  text-align: center;
   margin-left: 2rem;
   margin-right: 2rem;
 }

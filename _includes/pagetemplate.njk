@@ -4,6 +4,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>{{ title }}</title>
+      <link rel="icon" href="/assets/favicon.svg">
       <style>
       {% include 'normalize.css' %}
       {% include 'base.css' %}
@@ -34,7 +35,7 @@
         </a>
         <ul class="nav-list">
           <li><a href="/">Home</a></li>
-          <li><a href="/photos/">Photos</a></li>
+          <li><a href="/links/">Links</a></li>
           <li><a href="/about/">About</a></li>
           <li>
             <a href="/rss.xml" aria-label="RSS">
@@ -47,5 +48,6 @@
       </nav>
     </header>
     <main>{{ content | safe }}</main>
+    <footer></footer>
     </body>
   </html>

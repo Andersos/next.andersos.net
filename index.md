@@ -1,6 +1,6 @@
 ---
 layout: pagetemplate.njk
-title: andersos.net
+title: Andersos
 ---
 
 <style>
@@ -9,10 +9,16 @@ title: andersos.net
   display: inline-block;
   padding: 5px;
 }
+.timeline {
+  padding-left: 0;
+}
+.timeline-entry {
+  list-style: none;
+  font-size: 2rem;
+}
 </style>
 
-Andersos.net
-
+<h1>Filter</h1>
 <div class="filter">
 <input type="checkbox" id="series" name="series" value="📺" checked>
 <label for="series">📺</label>
@@ -43,33 +49,32 @@ function handelCheckboxChange(e) {
 };
 document.querySelectorAll("input").forEach(checkbox => checkbox.addEventListener("change", handelCheckboxChange));
 </script>
-<ul>
-
+<ul class="timeline">
 {% for event in timeline %}
 {% if event.type == "🎬" %}
 
-  <li data-type={{event.type}}>{{event['Date Watched']}} {{event.type}} {{event.Title}} {{event['Your Rating']}}/10</li>
+  <li class="timeline-entry" data-type={{event.type}}>{{event['Date Watched']}} {{event.type}} {{event.Title}} {{event['Your Rating']}}/10</li>
   {% elsif event.type == "🩸" %}
 
-  <li data-type={{event.type}}>{{event.date}} {{event.type}} {{event.location}}</li>
+  <li class="timeline-entry" data-type={{event.type}}>{{event.date}} {{event.type}} {{event.location}}</li>
   {% elsif event.type == "🚶‍♂️" %}
   {% if event.steps != 0 %}
-  <li data-type={{event.type}}>{{event.date}} {{event.type}} {{event.steps}}</li>
+  <li class="timeline-entry" data-type={{event.type}}>{{event.date}} {{event.type}} {{event.steps}}</li>
   {% endif %}
     {% elsif event.type == "🎲" %}
 
-  <li data-type={{event.type}}>{{event.date}} {{event.type}} {{event.game}} {{ event.players }}</li>
+  <li class="timeline-entry" data-type={{event.type}}><time datetime={{event.date}}>{{event.date}}</time> {{event.type}} {{event.game}} {{ event.players }}</li>
   {% elsif event.type == "🤿" %}
 
-  <li data-type={{event.type}}>{{event.date}} {{event.type}} {{event.location}}</li>
+  <li class="timeline-entry" data-type={{event.type}}>{{event.date}} {{event.type}} {{event.location}}</li>
    {% elsif event.type == "📷" %}
 
-  <li data-type={{event.type}}>{{event.date}} {{event.type}} {{event.caption}}</li>
+  <li class="timeline-entry" data-type={{event.type}}>{{event.date}} {{event.type}} {{event.caption}}</li>
    {% elsif event.type == "📹" %}
 
-  <li data-type={{event.type}}>{{event.date}} {{event.type}} {{event.caption}}</li>
+  <li class="timeline-entry" data-type={{event.type}}>{{event.date}} {{event.type}} {{event.caption}}</li>
 {% else %}
-  <li data-type={{event.type}}>{{event.date}} {{event.type}} {{event.name}}</li>
+  <li class="timeline-entry" data-type={{event.type}}>{{event.date}} {{event.type}} {{event.name}}</li>
 {% endif %}
 {% endfor %}
 
