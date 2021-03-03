@@ -16,6 +16,27 @@ html {
   color: white;
 }
 
+.hidden {
+  display: none;
+}
+
+main {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: gold;
+  box-shadow: 0 2px 0 0 gold;
+  outline: none;
+}
+
 header {
   display: flex;
   flex-wrap: wrap;
@@ -32,13 +53,6 @@ header a {
 header .icon {
   height: 2rem;
   width: 2rem;
-}
-
-header .nav-list a:hover,
-header .nav-list a:focus {
-  color: gold;
-  box-shadow: 0 2px 0 0 gold;
-  outline: none;
 }
 
 nav {
@@ -84,6 +98,7 @@ li {
 
 .logo:hover,
 .logo.focus-visible {
+  box-shadow: none;
   filter: hue-rotate(180deg);
 }
 
@@ -92,18 +107,6 @@ li {
     width: 100%;
     height: auto;
   }
-}
-
-.logo .left {
-  fill: var(--logo-left);
-}
-
-.logo .right {
-  fill: var(--logo-right);
-}
-
-.logo .bottom {
-  fill: var(--logo-bottom);
 }
 
 h2 {
@@ -117,11 +120,6 @@ h2 {
   margin: 0;
 }
 
-.hidden {
-  display: none;
-}
-
-main {
-  margin-left: 2rem;
-  margin-right: 2rem;
+.ml {
+  margin-left: 1rem;
 }

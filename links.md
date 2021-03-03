@@ -4,25 +4,20 @@ title: Links
 ---
 
 <ul>
-<li><a href="/movies">🎬 Movies</a><a href="movie-stats">📊</a></li>
+<li>🎬 <a class="ml" href="/movies">Movies</a><a class="ml" href="movie-stats">📊</a></li>
+<li>📷 <a class="ml" href="/photos">Photos</a></li>
 </ul>
-movies
 
-photos
+<div style="margin-top: 50rem">
+Will add pages for:
 
-series
-
-books
-
-toplist
-gear
-
-  <li><a href="https://andersos.net/2016/04/17/3000000/">🏃🏼 Activity</a></li>
-            <li><a href="https://boardgames.andersos.net">🎲 Boardgames</a></li>
-            <li><a href="https://books.andersos.net">📚 Books</a></li>
-            <li><a href="https://movies.andersos.net">🎬 Movies</a></li>
-            <li><a href="https://series.andersos.net">📺 Series</a></li>
-            <li><a href="https://divelog.andersos.net">🤿 Divelog 🔜</a></li>
-            <li><a href="https://photos.andersos.net">📷 Photos</a></li>
-            <li><a href="https://andersos.net/pakkkelister">Pakkelister 🔜</a></li>
-            <li><a>💰 Investments 🔜</a></li>
+- series
+- books
+- toplist
+- gear
+- 🎲 Boardgames
+- divelog
+- investments
+- pakkelister
+- <a href="https://andersos.net/2016/04/17/3000000/">🏃🏼 Activity</a>
+</div>
