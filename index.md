@@ -9,12 +9,10 @@ title: Andersos
   display: inline-block;
   padding: 5px;
 }
-.timeline {
-  padding-left: 0;
-}
+
 .timeline-entry {
-  list-style: none;
-  font-size: 2rem;
+  margin-top: .4rem;
+  margin-bottom: .4rem;
 }
 </style>
 
@@ -24,9 +22,9 @@ title: Andersos
 <label for="series">📺</label>
 <input type="checkbox" id="movies" name="movies" value="🎬" checked>
 <label for="movies">🎬</label>
-<input type="checkbox" id="blood" name="blood" value="🩸" checked>
+<input type="checkbox" id="blood" name="blood" value="🩸">
 <label for="blood">🩸</label>
-<input type="checkbox" id="activity" name="activity" value="🚶‍♂️" checked>
+<input type="checkbox" id="activity" name="activity" value="🚶‍♂️" >
 <label for="activity">🚶‍♂️</label>
 <input type="checkbox" id="books" name="books" value="📖" checked>
 <label for="books">📖</label>
@@ -49,21 +47,19 @@ function handelCheckboxChange(e) {
 };
 document.querySelectorAll("input").forEach(checkbox => checkbox.addEventListener("change", handelCheckboxChange));
 </script>
-<ul class="timeline">
+<ul>
 {% for event in timeline %}
 {% if event.type == "🎬" %}
 
   <li class="timeline-entry" data-type={{event.type}}>{{event['Date Watched']}} {{event.type}} {{event.Title}} {{event['Your Rating']}}/10</li>
   {% elsif event.type == "🩸" %}
-
-  <li class="timeline-entry" data-type={{event.type}}>{{event.date}} {{event.type}} {{event.location}}</li>
+  <li style="display: none;" class="timeline-entry" data-type={{event.type}}>{{event.date}} {{event.type}} {{event.location}}</li>
   {% elsif event.type == "🚶‍♂️" %}
   {% if event.steps != 0 %}
-  <li class="timeline-entry" data-type={{event.type}}>{{event.date}} {{event.type}} {{event.steps}}</li>
+  <li style="display: none;" class="timeline-entry" data-type={{event.type}}>{{event.date}} {{event.type}} {{event.steps}}</li>
   {% endif %}
     {% elsif event.type == "🎲" %}
-
-  <li class="timeline-entry" data-type={{event.type}}><time datetime={{event.date}}>{{event.date}}</time> {{event.type}} {{event.game}} {{ event.players }}</li>
+  <li class="timeline-entry" data-type={{event.type}}><time datetime={{event.date}}>{{event.date}}</time> {{event.type}} {{event.game}}</li>
   {% elsif event.type == "🤿" %}
 
   <li class="timeline-entry" data-type={{event.type}}>{{event.date}} {{event.type}} {{event.location}}</li>

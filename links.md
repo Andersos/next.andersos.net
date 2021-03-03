@@ -3,6 +3,9 @@ layout: pagetemplate.njk
 title: Links
 ---
 
+<ul>
+<li><a href="/movies">🎬 Movies</a><a href="movie-stats">📊</a></li>
+</ul>
 movies
 
 photos
@@ -13,6 +16,7 @@ books
 
 toplist
 gear
+
   <li><a href="https://andersos.net/2016/04/17/3000000/">🏃🏼 Activity</a></li>
             <li><a href="https://boardgames.andersos.net">🎲 Boardgames</a></li>
             <li><a href="https://books.andersos.net">📚 Books</a></li>
